@@ -1,0 +1,41 @@
+BMD Convent School — cloud par kaise host karein
+
+Maine app cloud-ready bana di hai (server.py PORT use karta hai).
+Aapka Render / Railway account mere paas nahi hai, isliye live URL yahin se automatically nahi ban sakti.
+Neeche sabse simple free method hai.
+
+========================
+METHOD 1 — Render (recommended)
+========================
+1. https://github.com par free account banao
+2. Naya repository: bmd-convent-school
+3. Is schoolos folder ki saari files repo mein upload / push karo
+4. https://render.com par Sign up (GitHub se)
+5. Dashboard → New → Web Service
+6. Wahi GitHub repo select karo
+7. Settings:
+   Runtime       : Python 3
+   Build command : echo ready
+   Start command : python server.py
+   Instance      : Free
+8. Deploy
+9. Render ek URL dega jaise:
+   https://bmd-convent-school.onrender.com
+10. Mobile: us URL ko phone Chrome mein kholo → Add to Home screen
+
+Pehli baar free plan 30-60 sec soya hua lag sakta hai.
+
+========================
+METHOD 2 — Railway
+========================
+https://railway.app → New Project → Deploy from GitHub → same repo
+Start command: python server.py
+
+========================
+LIMIT
+========================
+Free cloud par data.json restart ke baad reset ho sakta hai.
+Roz ke school use ke liye baad mein paid disk / database lagani chahiye.
+
+Login: admin / admin123
+       teacher / teach123

@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --ink: #1c1914;
+  --paper: #f3ead7;
+  --cream: #fbf6ea;
+  --rule: #d7c8a6;
+  --oak: #6b4f2d;
+  --stamp: #7a1f1f;
+  --green: #2f5d3a;
+  --green-soft: #dce8d8;
+  --red-soft: #f3d4d0;
+  --navy: #243044;
+  --muted: #6d6456;
+  --shadow: 0 10px 28px rgba(60, 40, 15, .12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100%; }
+body {
+  font-family: "IBM Plex Sans", "Noto Sans Devanagari", system-ui, sans-serif;
+  background:
+    radial-gradient(ellipse at top, rgba(255,255,255,.35), transparent 42%),
+    repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(107,79,45,.04) 28px),
+    #e7dcc4;
+  color: var(--ink);
+}
+h1, h2, .serif { font-family: "Source Serif 4", Georgia, serif; }
+button, input, select, textarea { font: inherit; color: inherit; }
+.hidden { display: none !important; }
+
+.login-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.login-card {
+  width: min(440px, 100%);
+  background: var(--cream);
+  border: 1px solid #cbb892;
+  box-shadow: var(--shadow);
+  padding: 28px 26px 22px;
+  position: relative;
+}
+.login-card:before {
+  content: "SESSION 2026–27";
+  position: absolute; top: 10px; right: 12px;
+  font-size: 10px; letter-spacing: .14em; color: var(--oak);
+}
+.crest-img { width: 72px; height: auto; display: block; margin-bottom: 8px; }
+.letterhead {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 22px 8px;
+  background: linear-gradient(#fff8e8, #f3e6c4);
+  border-bottom: 4px solid #7a1f1f;
+}
+.letterhead img { width: 62px; height: auto; }
+.letterhead .names { flex: 1; text-align: center; }
+.letterhead h1 { font-size: 22px; line-height: 1.15; color: #3a2410; }
+.letterhead .motto { font-style: italic; color: #7a1f1f; font-size: 12px; margin-top: 2px; }
+.letterhead .meta { font-size: 11px; color: #6b4f2d; margin-top: 3px; }
+.side-crest { width: 48px; height: auto; display: block; margin: 0 auto 8px; }
+.login-card h1 { font-size: 28px; line-height: 1.1; }
+.school-line { color: var(--oak); margin: 4px 0 18px; font-size: 14px; }
+.field { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }
+.field label { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.field input, .field select, .field textarea {
+  background: #fffdf7;
+  border: 1px solid #cfc09a;
+  border-radius: 2px;
+  padding: 10px 11px;
+}
+.field input:focus { outline: 2px solid #b0894a; border-color: #b0894a; }
+.btn {
+  background: var(--navy);
+  color: #f6efe0;
+  border: 0;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: 600;
+}
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid #cbb892; }
+.btn.danger { background: var(--stamp); color: #fff; }
+.btn.small { padding: 6px 9px; font-size: 12px; font-weight: 500; }
+.btn.green { background: var(--green); }
+.hint { margin-top: 12px; font-size: 12px; color: var(--muted); }
+
+.app { display: grid; grid-template-columns: 230px 1fr; min-height: 100vh; }
+.sidebar {
+  background: #2a241b;
+  color: #efe6d2;
+  padding: 18px 10px;
+}
+.side-brand { padding: 4px 10px 18px; }
+.side-brand small { color: #cbb892; display: block; margin-top: 3px; }
+.nav-btn {
+  width: 100%; text-align: left; background: transparent;
+  color: #d9cdb3; border: 0; padding: 9px 12px; cursor: pointer; margin-bottom: 2px;
+}
+.nav-btn.active, .nav-btn:hover { background: #3b3327; color: #fff8e8; }
+.topbar {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  padding: 16px 22px 12px;
+  border-bottom: 3px double #b89b63;
+  background: var(--cream);
+}
+.topbar h2 { font-size: 26px; }
+.page { padding: 18px 22px 40px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.card {
+  background: var(--cream);
+  border: 1px solid #d2c29a;
+  padding: 14px;
+  box-shadow: 0 1px 0 #fff inset;
+}
+.card h3 { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.card .num { font-family: "Source Serif 4", serif; font-size: 28px; margin-top: 6px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.table-wrap { overflow: auto; margin-top: 12px; background: var(--cream); border: 1px solid #d2c29a; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+th, td { padding: 9px 10px; border-bottom: 1px solid var(--rule); text-align: left; }
+th {
+  background: #efe4c8;
+  font-size: 11px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--oak);
+}
+tr:nth-child(even) td { background: #f7f0de; }
+.badge { padding: 2px 7px; font-size: 11px; border: 1px solid currentColor; }
+.present { background: var(--green-soft); color: var(--green); }
+.absent { background: var(--red-soft); color: var(--stamp); }
+.paid { background: #d9e4f2; color: #1e3a5f; }
+.due { background: #f6e3b8; color: #6b3f08; }
+.toolbar { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.search {
+  min-width: 210px; background: #fffdf7; border: 1px solid #cfc09a;
+  padding: 8px 10px;
+}
+.modal-bg {
+  position: fixed; inset: 0; background: rgba(28,25,20,.45);
+  display: grid; place-items: center; padding: 16px; z-index: 20;
+}
+.modal {
+  width: min(540px, 100%);
+  background: var(--cream);
+  border: 1px solid #cbb892;
+  padding: 18px;
+}
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.print-slip { background: #fff; color: #111; padding: 18px; border: 1px dashed #999; }
+.office-note { font-size: 12px; color: var(--muted); margin-top: 16px; }
+@media (max-width: 860px) {
+  .app { grid-template-columns: 1fr; }
+  .sidebar { display: flex; gap: 4px; overflow: auto; }
+  .nav-btn { white-space: nowrap; width: auto; }
+  .grid2 { grid-template-columns: 1fr; }
+}
+@media print {
+  .sidebar, .topbar, .toolbar, .btn { display: none !important; }
+}

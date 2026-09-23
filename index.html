@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2a241b" />
+  <title>BMD Convent School — Office Register</title>
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./icons/icon.svg" />
+  <link rel="stylesheet" href="./css/app.css" />
+</head>
+<body>
+  <div id="loginScreen" class="login-wrap">
+    <div class="login-card">
+      <img class="crest-img" src="./icons/crest.svg" alt="BMD crest" />
+      <h1>BMD Convent School</h1>
+      <p class="school-line">Sanjay Colony, Sec-23, 33 Feet Road<br>Near KD Jewellers · Office register</p>
+      <div class="field">
+        <label>Staff ID</label>
+        <input id="user" value="admin" autocomplete="username" />
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input id="pass" type="password" value="admin123" autocomplete="current-password" />
+      </div>
+      <button class="btn" style="width:100%" onclick="login()">Register kholo</button>
+      <div id="loginErr" class="hint" style="color:#7a1f1f"></div>
+      <p class="hint">Office: admin / admin123<br>Staff: teacher / teach123</p>
+      <p class="hint"><a href="mobile.html" style="color:#7a1f1f">Mobile app kholo →</a></p>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="side-brand" style="text-align:center">
+        <img class="side-crest" src="./icons/crest.svg" alt="crest" />
+        <strong class="serif">BMD Convent</strong>
+        <small>Pathshala Desk</small>
+      </div>
+      <button class="nav-btn active" data-page="dashboard" onclick="go('dashboard')">Office board</button>
+      <button class="nav-btn" data-page="students" onclick="go('students')">Vidyarthi</button>
+      <button class="nav-btn" data-page="teachers" onclick="go('teachers')">Adhyapak</button>
+      <button class="nav-btn" data-page="attendance" onclick="go('attendance')">Haazri</button>
+      <button class="nav-btn" data-page="salary" onclick="go('salary')">Vetan</button>
+      <button class="nav-btn" data-page="bills" onclick="go('bills')">Fees / Bill</button>
+      <button class="nav-btn" data-page="books" onclick="go('books')">Pustakalaya</button>
+      <button class="nav-btn" data-page="reports" onclick="go('reports')">Khata</button>
+      <button class="nav-btn" onclick="logout()">Bahar niklein</button>
+    </aside>
+    <main>
+      <div class="letterhead">
+        <img src="./icons/crest.svg" alt="School crest" />
+        <div class="names">
+          <h1>BMD Convent School</h1>
+          <div class="motto">“Vidya Dadati Vinayam”</div>
+          <div class="meta">Sanjay Colony, Sec-23, 33 Feet Road, Near KD Jewellers · Session 2026–27</div>
+        </div>
+        <div id="who" style="font-size:12px;color:#6d6456;text-align:right;min-width:110px"></div>
+      </div>
+      <div class="topbar">
+        <h2 id="title">Office board</h2>
+        <div style="font-size:11px;letter-spacing:.12em;color:#6b4f2d">OFFICE REGISTER</div>
+      </div>
+      <div class="page" id="content"></div>
+    </main>
+  </div>
+  <script src="./js/store.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

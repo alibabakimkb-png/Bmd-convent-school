@@ -1,0 +1,27 @@
+BMD Convent School — working app
+
+Computer par Python chahiye (already most PCs par hota hai).
+
+1. schoolos folder kholo
+2. Terminal / CMD mein:
+
+   python3 server.py
+
+   Windows ho to: python server.py
+
+3. Browser:
+
+   Mobile app : http://127.0.0.1:8080/
+   Office desk: http://127.0.0.1:8080/office
+
+Login
+  admin / admin123
+  teacher / teach123
+
+Jo bhi add / haazri / fee / salary change karoge woh data.json file mein save hota hai.
+Mobile aur office dono same data use karte hain.
+
+Phone se chalane ke liye computer aur phone same WiFi par hon.
+Computer ka IP nikaalo (jaise 192.168.1.10) phir phone browser:
+  http://192.168.1.10:8080/
+Phir Chrome menu → Add to Home screen.

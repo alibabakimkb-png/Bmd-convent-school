@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#1a140c"/>
+  <path d="M96 70h320l-16 250c-12 70-144 112-144 112s-132-42-144-112L96 70z" fill="#2a1d10" stroke="#c9a227" stroke-width="10"/>
+  <circle cx="256" cy="190" r="72" fill="#f4e7c3" stroke="#c9a227" stroke-width="8"/>
+  <path d="M256 148c16 20 40 32 40 54a40 40 0 1 1-80 0c0-22 24-34 40-54z" fill="#7a1f1f"/>
+  <text x="256" y="360" text-anchor="middle" font-size="42" font-family="Georgia, serif" fill="#f4e7c3">BMD</text>
+</svg>
